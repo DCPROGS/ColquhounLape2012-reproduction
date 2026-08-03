@@ -1,0 +1,26 @@
+# Environment for the Colquhoun & Lape (2012) reproduction notebook.
+#
+#   conda env create -f environment.yml
+#   conda activate cl2012
+#
+# SCALCS is pinned to an immutable tag. Later releases may change results.
+name: cl2012
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.13
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  # jinja2 is what pandas uses to render the formatted tables (df.style).
+  # It is not pulled in by pandas itself, and the notebook stops at the first
+  # table without it.
+  - jinja2
+  - jupyterlab
+  - nbconvert
+  - pip
+  - pip:
+      - scalcs @ git+https://github.com/DCPROGS/SCALCS.git@v0.5.1-cl2012

@@ -1,0 +1,17 @@
+# Dependencies for the Colquhoun & Lape (2012) reproduction notebook.
+#
+#   pip install -r requirements.txt
+#
+# SCALCS is pinned to an immutable tag. Later releases may change results.
+# numpy, scipy, Deprecated and tabulate arrive as SCALCS dependencies.
+scalcs @ git+https://github.com/DCPROGS/SCALCS.git@v0.5.1-cl2012
+
+pandas
+matplotlib
+
+# pandas renders the tables in the notebook through its Styler, which needs
+# jinja2; pandas does not depend on it.
+jinja2
+
+jupyterlab
+nbconvert

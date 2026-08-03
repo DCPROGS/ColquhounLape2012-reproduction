@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+title: >-
+  Reproduction of the calculations in Colquhoun & Lape (2012),
+  Allosteric coupling in ligand-gated ion channels
+message: >-
+  If you use this reproduction, please cite both the original paper and this
+  repository.
+type: software
+authors:
+  - family-names: Lape
+    given-names: Remigijus
+  - family-names: Colquhoun
+    given-names: David
+abstract: >-
+  A Jupyter notebook that recomputes, from the published rate constants, every
+  number and calculated figure in Colquhoun & Lape (2012): Figs. 6, 7 and 8,
+  Table 1, and the quantities quoted in the running text. Accompanies a
+  corrigendum correcting two interchanged traces in Fig. 6 B and recording that
+  the calculations were made from a single dataset rather than from the averaged
+  rate constants of Fig. 3.
+keywords:
+  - ion channels
+  - single-channel kinetics
+  - Q-matrix
+  - glycine receptor
+  - flip mechanism
+  - reproducibility
+license: GPL-2.0-only
+repository-code: 'https://github.com/DCPROGS/ColquhounLape2012-reproduction'
+references:
+  - type: article
+    authors:
+      - family-names: Colquhoun
+        given-names: David
+      - family-names: Lape
+        given-names: Remigijus
+    title: Allosteric coupling in ligand-gated ion channels
+    journal: Journal of General Physiology
+    volume: 140
+    issue: 6
+    start: 599
+    end: 612
+    year: 2012
+    doi: 10.1085/jgp.201210844
+  - type: software
+    title: SCALCS
+    version: v0.5.1-cl2012
+    repository-code: 'https://github.com/DCPROGS/SCALCS'
