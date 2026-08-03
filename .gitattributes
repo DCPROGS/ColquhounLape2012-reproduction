@@ -1,0 +1,12 @@
+# Keep LF in the repository for everything textual.
+#
+# The CI workflow contains a shell heredoc; if it were checked in with CRLF the
+# job would fail on Linux with an unterminated heredoc. Committing from Windows
+# without this is enough to cause that, so it is deliberate rather than tidiness.
+* text=auto eol=lf
+
+# Notebooks are JSON: diffable, but never merge them by hand.
+*.ipynb text eol=lf merge=binary
+
+*.png binary
+*.pdf binary
