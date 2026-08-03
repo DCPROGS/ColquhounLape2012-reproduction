@@ -48,6 +48,15 @@ the smaller occupancies and up to 26 % out on the route probabilities, and it
 misorders the two outside routes at 1 mM. The notebook computes both and
 tabulates the difference side by side, so the size of the effect is visible.
 
+**3. One published number appears to be a misprint.** The paper gives the
+clockwise route probability at 10 µM as 2.8 × 10⁻⁵. The rate constants used for
+everything else give 2.385 × 10⁻⁵, which would print as 2.4 × 10⁻⁵. The same
+expression reproduces the 1 mM value exactly (0.05727 against a published
+0.0573), and the paper's own following sentence — that the other two routes are
+"about 30 times more likely than the clockwise route" — holds for 2.4 × 10⁻⁵
+(ratios 30.7 and 32.1) but not for 2.8 × 10⁻⁵ (26.1 and 27.5). No conclusion
+depends on it.
+
 The two sets differ in a second way that matters. The single dataset obeys
 microscopic reversibility to within float32 round-off (`max |f_ij − f_ji|`
 relative error 2.1e-09 at 10 µM), whereas the averaged set violates it by 3–4 %,
@@ -144,7 +153,7 @@ modules resolved to the installed package, not to a development checkout.
 
 | file | |
 |---|---|
-| `ColquhounLape2012_reproduction.ipynb` | the reproduction; 71 cells, 4 figures, stored with its outputs so it can be read on GitHub without running anything |
+| `ColquhounLape2012_reproduction.ipynb` | the reproduction; 66 cells, 3 figures, stored with its outputs so it can be read on GitHub without running anything |
 | `environment.yml` | conda specification |
 | `requirements.txt` | pip specification |
 | `.github/workflows/run-notebook.yml` | CI that executes the notebook and checks the verification cell passed |
