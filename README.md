@@ -153,7 +153,7 @@ modules resolved to the installed package, not to a development checkout.
 
 | file | |
 |---|---|
-| `ColquhounLape2012_reproduction.ipynb` | the reproduction; 66 cells, 3 figures, stored with its outputs so it can be read on GitHub without running anything |
+| `ColquhounLape2012_reproduction.ipynb` | the reproduction; 57 cells, 3 figures, stored with its outputs so it can be read on GitHub without running anything |
 | `environment.yml` | conda specification |
 | `requirements.txt` | pip specification |
 | `.github/workflows/run-notebook.yml` | CI that executes the notebook and checks the verification cell passed |
