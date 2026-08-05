@@ -48,8 +48,15 @@ the smaller occupancies and up to 26 % out on the route probabilities, and it
 misorders the two outside routes at 1 mM. The notebook computes both and
 tabulates the difference side by side, so the size of the effect is visible.
 
-**3. One published number appears to be a misprint.** The paper gives the
-clockwise route probability at 10 µM as 2.8 × 10⁻⁵. The rate constants used for
+**3. Two published numbers appear to be misprints.** Neither affects any
+conclusion.
+
+*Table 1, `AF*` at 1 mM.* Given as 0.0015 %; the rate constants give 0.001154 %,
+which would print as 0.0012, and the Fig. 3 averages give 0.001196 %. Nineteen
+of the twenty entries in Table 1 match to the precision printed; this is the
+exception.
+
+*The clockwise route probability at 10 µM.* The paper gives it as 2.8 × 10⁻⁵. The rate constants used for
 everything else give 2.385 × 10⁻⁵, which would print as 2.4 × 10⁻⁵. The same
 expression reproduces the 1 mM value exactly (0.05727 against a published
 0.0573), and the paper's own following sentence — that the other two routes are
