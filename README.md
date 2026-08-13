@@ -1,6 +1,7 @@
 # Reproduction of the calculations in Colquhoun & Lape (2012)
 
 [![run notebook](https://github.com/DCPROGS/ColquhounLape2012-reproduction/actions/workflows/run-notebook.yml/badge.svg)](https://github.com/DCPROGS/ColquhounLape2012-reproduction/actions/workflows/run-notebook.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21916702.svg)](https://doi.org/10.5281/zenodo.21916702)
 
 Colquhoun, D., and R. Lape. 2012. Allosteric coupling in ligand-gated ion
 channels. *J. Gen. Physiol.* 140:599–612.

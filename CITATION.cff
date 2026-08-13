@@ -8,6 +8,14 @@ message: >-
 type: software
 version: 1.0.0
 date-released: '2026-08-13'
+# The concept DOI, which always resolves to the most recent version.
+doi: 10.5281/zenodo.21916702
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21916703
+    description: >-
+      The archived v1.0.0 release. This is the version the corrigendum cites,
+      because it resolves to exactly the code that produced the numbers.
 authors:
   - family-names: Lape
     given-names: Remigijus
