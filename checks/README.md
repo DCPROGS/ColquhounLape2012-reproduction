@@ -40,22 +40,37 @@ python compare_retarget.py pinned.txt latest.txt v0.5.1-cl2012 latest
 
 ## What you should see
 
-Of the 28 quantities compared, 13 agree bit for bit and 15 differ. The largest
-disagreement on any reported quantity is about **5.8 × 10⁻⁷** relative, on the
-`A2F*` peak during the pulse; `p(A3F)` at 12 ms differs by 1.4 × 10⁻⁷ and is
-0.0498 either way. No value printed anywhere in the notebook changes at the
-precision shown.
+Of the 28 quantities compared, about half agree bit for bit and the rest differ
+in their last digits. **The largest disagreement on any quantity the notebook
+reports is under 1 × 10⁻⁶ relative** — on two runs here it was 5.8 × 10⁻⁷ and
+6.6 × 10⁻⁷, both on the `A2F*` peak during the pulse. `p(A3F)` at 12 ms differs
+by around 1.5 × 10⁻⁷ and is 0.0498 either way. No value printed anywhere in the
+notebook changes at the precision shown.
+
+Do not expect the exact figures to reproduce. The residuals are round-off, so
+they shift with the numpy and scipy build, and so does the count of quantities
+that differ. The claim worth checking is the bound — better than one part in
+10⁶ on everything reported — not any particular digit.
 
 The cause is not the two APIs, which describe the same pulse and hand it to
 `scipy.odeint` with the same `atol` and `rtol`. The equilibrium occupancies that
-seed the integration differ by about 3 × 10⁻⁹ between versions, and integrating
-amplifies that.
+seed the integration differ by a few parts in 10⁹ between versions, and
+integrating amplifies that.
 
-One line of the comparison looks alarming and is not. `MR |f_ij - f_ji| max`
-differs by 1.3 × 10⁻⁵ relative, but that compares 3.407262 × 10⁻⁸ against
-3.407218 × 10⁻⁸ — two round-off residuals from the microscopic-reversibility
+Two lines of the comparison look alarming and are not.
+
+`MR |f_ij - f_ji| max` can differ by around 10⁻⁵ relative, but it compares two
+numbers near 3.4 × 10⁻⁸ — round-off residuals from the microscopic-reversibility
 check. The relative difference between two quantities that are both
 indistinguishable from zero carries no meaning.
+
+The weighted relaxation time constants may print as complex on the pinned
+release, as `(0.8373957876+0j)`, while the later one prints a real number. That
+is the numpy 2.5 change to `linalg.eig`, which returns `complex128` for a real
+matrix whose eigenvalues are all real; later SCALCS releases defend against it
+and v0.5.1 predates the fix. It does not affect the notebook, which computes the
+transition probabilities and frequencies directly from the Q matrix rather than
+through the library — one of the reasons it does so.
 
 ## A note on how these are run
 
