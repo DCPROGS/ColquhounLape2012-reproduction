@@ -6,6 +6,8 @@ message: >-
   If you use this reproduction, please cite both the original paper and this
   repository.
 type: software
+version: 1.0.0
+date-released: '2026-08-13'
 authors:
   - family-names: Lape
     given-names: Remigijus
