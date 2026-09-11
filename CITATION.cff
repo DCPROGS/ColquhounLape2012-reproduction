@@ -6,16 +6,20 @@ message: >-
   If you use this reproduction, please cite both the original paper and this
   repository.
 type: software
-version: 1.0.0
-date-released: '2026-08-13'
+version: 1.0.1
+date-released: '2026-09-11'
 # The concept DOI, which always resolves to the most recent version.
 doi: 10.5281/zenodo.21916702
 identifiers:
   - type: doi
     value: 10.5281/zenodo.21916703
     description: >-
-      The archived v1.0.0 release. This is the version the corrigendum cites,
-      because it resolves to exactly the code that produced the numbers.
+      The archived v1.0.0 release: the code and outputs exactly as they were
+      when the corrigendum was first submitted. v1.0.1 differs from it only by
+      a note in the front matter recording that the notebook was drafted with
+      the assistance of a large language model; no calculation, output or
+      figure changed. The corrigendum should cite whichever of the two carries
+      the wording the journal has accepted.
 authors:
   - family-names: Lape
     given-names: Remigijus
