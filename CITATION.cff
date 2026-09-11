@@ -12,14 +12,18 @@ date-released: '2026-09-11'
 doi: 10.5281/zenodo.21916702
 identifiers:
   - type: doi
+    value: 10.5281/zenodo.22708984
+    description: >-
+      The archived v1.0.1 release, and the one the corrigendum should cite: it
+      resolves to exactly the code that produced the numbers, and it carries
+      the note recording that the notebook was drafted with the assistance of a
+      large language model.
+  - type: doi
     value: 10.5281/zenodo.21916703
     description: >-
       The archived v1.0.0 release: the code and outputs exactly as they were
       when the corrigendum was first submitted. v1.0.1 differs from it only by
-      a note in the front matter recording that the notebook was drafted with
-      the assistance of a large language model; no calculation, output or
-      figure changed. The corrigendum should cite whichever of the two carries
-      the wording the journal has accepted.
+      that note; no calculation, output or figure changed.
 authors:
   - family-names: Lape
     given-names: Remigijus
